@@ -1,0 +1,98 @@
+/* Modern light/minimal Bootstrap supplement styles for Evaluation Report Viewer */
+
+/* App wrapper centers content and uses Bootstrap container spacing */
+.App {
+  text-align: left;
+  background-color: #f8f9fa;
+  color: #282c34;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Card styling tweaks */
+.card {
+  border-radius: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #495057;
+}
+
+/* Modal shadow and rounded look */
+.modal-content {
+  border-radius: 0.8rem;
+}
+
+/* Bootstrap modal backdrop overlay improvement for SPA */
+.modal-backdrop {
+  z-index: 1050;
+  background-color: #000;
+  opacity: 0.38 !important;
+}
+
+/* Modal dialog header: consistent with Bootstrap primary */
+.modal-header {
+  border-top-left-radius: .8rem;
+  border-top-right-radius: .8rem;
+  border-bottom: none;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+}
+
+.modal-footer {
+  border-bottom-right-radius: .8rem;
+  border-bottom-left-radius: .8rem;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Button custom (use Bootstrap classes, but add custom radius/weight for modern) */
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+/* Modal pre/code/scrollbar improvements */
+.modal-body pre {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  color: #222;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Responsive modal body so it never overflows and is nicely scrollable */
+@media (max-width: 991px) {
+  .modal-dialog {
+    max-width: 95vw;
+    margin: 1.75rem auto;
+  }
+  .modal-body {
+    max-height: 45vh !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal-body {
+    max-height: 30vh !important;
+    font-size: .98rem !important;
+  }
+}
+
+/* Hide legacy theme button, dark theme, etc. */
+.theme-toggle, .App-logo, .App-header, .App-link {
+  display: none !important;
+}
